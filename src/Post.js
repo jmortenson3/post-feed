@@ -37,11 +37,14 @@ class Post extends Component {
   }
 
   render() {
+    const styles = {
+      margin: '15px'
+    }
     return (
-      <div className="card" style={{}}>
+      <div className="card" style={ styles }>
         <div className="card-body">
-          <p className="card-title">User {this.state.username}  |  {this.state.name}</p>
-          <p className="card-subtitle mb-2 text-muted">{this.props.title}</p>
+          <h6 className="card-title">{ this.state.name }</h6>
+          <p className="card-subtitle"><span className="text-secondary">@{ this.state.username }</span></p>
           <p className="card-body">{this.props.body}</p>
         </div>
       </div>
